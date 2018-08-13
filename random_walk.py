@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # This Python code generates random walk trajectories and plots them
 # Trajectories move (+-1, +-1) in 2D space, with equal probability of +- for
 # each co-ordinate.
-# 
+#
 
 
 def get_new_position(x):
@@ -45,7 +45,6 @@ def do_n_random_walks(nsteps, nwalks, x0,y0):
         xi,yi = do_random_walk(nsteps,x0,y0)
         x[i,:] = xi
         y[i,:] = yi
-
 
     # Find maximum, minimum x and y
     xmax = np.amax(x)
@@ -87,6 +86,7 @@ for i in range(nwalks):
     ax1.plot(x[i,:],y[i,:])
 
 plt.show()
+fig1.savefig('random_walk.png')
 
 
 
